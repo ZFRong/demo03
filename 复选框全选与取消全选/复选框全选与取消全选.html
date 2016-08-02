@@ -1,0 +1,49 @@
+<html>  
+  <head>  
+  <meta charset="utf-8">
+    <title>复选框全选与取消全选</title>  
+    <script type="text/javascript">  
+	//原生js
+/*
+            function myFunction()  
+            {  
+               var bBoolean = document.myForm2.cb.checked;  
+               if(bBoolean){  
+                  document.myForm1.cb1.checked = true;  
+                  document.myForm1.cb2.checked = true;  
+                  document.myForm1.cb3.checked = true;  
+               }else{  
+                  document.myForm1.cb1.checked = false;  
+                  document.myForm1.cb2.checked = false;  
+                  document.myForm1.cb3.checked = false;  
+               }  
+            }  
+  */
+    </script>  
+  </head>  
+  <body>  
+    <h1>请选择你的爱好</h1>  
+    <form name="myForm1" class="test01">  
+        <input type="checkbox" name="cb1" checked>看书<br>  
+        <input type="checkbox" name="cb2" checked>上网<br>  
+        <input type="checkbox" name="cb3">游戏<br>  
+    </form>  
+    <hr>  
+    <form name="myForm2" class="test02">  
+        <input type="checkbox" name="cb">全选
+    </form> 
+    
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$("h1").css("color","#2BF7A1");
+$(".test02 input").click(function(){
+	// 如果使用attr只能点选一次
+  if(this.checked){
+	  $(".test01 input").prop("checked",true);
+	  }else{
+		  $(".test01 input").prop("checked",false);
+		  }
+	})
+</script>     
+</body>  
+</html>  
